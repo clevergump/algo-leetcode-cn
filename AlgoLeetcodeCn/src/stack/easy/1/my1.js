@@ -75,4 +75,4 @@ var twoSum = function (nums, target) {
         return Math.floor((index1 + index2) / 2);
     }
 };
-console.log(twoSum([1, 2, 4, 3], 6));
+console.log(twoSum([3, 1, 2, 4], 6));
