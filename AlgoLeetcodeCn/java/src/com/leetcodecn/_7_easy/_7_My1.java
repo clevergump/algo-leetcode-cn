@@ -39,8 +39,16 @@ package com.leetcodecn._7_easy;
  * <p>
  * -2^31 <= x <= 2^31 - 1
  */
-public class _7_My {
+public class _7_My1 {
 
+    /**
+     * 性能测试结果:
+     * 时间: 2 ms
+     * 内存: 35.6 MB
+     *
+     * @param original
+     * @return
+     */
     public static int reverseInt(int original) {
         // 因为对 Integer.MIN_VALUE 使用 Math.abs 计算出来的不是正数, 而是该最小值本身. 详情见 API说明.
         if (original == Integer.MIN_VALUE) {
