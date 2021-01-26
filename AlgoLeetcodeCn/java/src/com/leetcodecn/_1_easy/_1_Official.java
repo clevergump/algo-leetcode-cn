@@ -1,12 +1,11 @@
 package com.leetcodecn._1_easy;
 
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
-
 import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 1. 两数之和
  * 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 的那 两个 整数，并返回它们的数组下标。
  * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
  * 你可以按任意顺序返回答案。
@@ -32,7 +31,7 @@ import java.util.Map;
  * 链接：https://leetcode-cn.com/problems/two-sum
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class _1_Easy {
+public class _1_Official {
 
     public static int[] findIndexesOfTwo(int[] nums, int target) {
         if (nums == null) {
