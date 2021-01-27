@@ -22,8 +22,10 @@ package com.leetcodecn._9_easy;
  * 进阶:
  *
  * 你能不将整数转为字符串来解决这个问题吗？
+ *
+ * https://leetcode-cn.com/problems/palindrome-number/
  */
-public class _9_My {
+public class _9_My1 {
 
 
     /**
@@ -31,6 +33,9 @@ public class _9_My {
      *
      * 执行用时: 12 ms
      * 内存消耗: 37.9 MB
+     *
+     * 时间复杂度 O(1): 十进制整数的位数有限(最多大概10位, 含符号11位  2147483647, -2147483648 的位数),
+     *      双指针遍历, 所以时间复杂度 O(1)
      *
      * @param x
      * @return
