@@ -7,9 +7,10 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.leetcodecn._21_easy._21_My1.*;
+import static com.leetcodecn._21_easy._21Recursion.ListNode;
 
-class _21_My1Test {
+
+class _21RecursionTest {
 
     ListNode l1;
     ListNode l2;
@@ -72,23 +73,21 @@ class _21_My1Test {
 
     @Test
     void mergeTwoLists() {
-        ListNode node1 = new _21_My1().mergeTwoLists(null, null);
+        ListNode node1 = new _21Recursion().mergeTwoLists(null, null);
         Assertions.assertEquals(null, node1);
 
-        ListNode _node1 = new _21_My1().mergeTwoLists(null, l2);
+        ListNode _node1 = new _21Recursion().mergeTwoLists(null, l2);
         Assertions.assertEquals(l2, _node1);
 
-        ListNode __node1 = new _21_My1().mergeTwoLists(null, l1);
+        ListNode __node1 = new _21Recursion().mergeTwoLists(null, l1);
         Assertions.assertEquals(l1, __node1);
 
 
-
-
-        ListNode node2 = new _21_My1().mergeTwoLists(l1, l2);
+        ListNode node2 = new _21Recursion().mergeTwoLists(l1, l2);
         List<Integer> nodesValues = getNodesValues(node2, 6);
         int[] expected = {1, 2, 2, 3, 4, 4};
         Assertions.assertEquals(expected.length, nodesValues.size());
-        for (int i=0; i<nodesValues.size(); i++){
+        for (int i = 0; i < nodesValues.size(); i++) {
             Assertions.assertEquals(expected[i], nodesValues.get(i).intValue());
         }
     }

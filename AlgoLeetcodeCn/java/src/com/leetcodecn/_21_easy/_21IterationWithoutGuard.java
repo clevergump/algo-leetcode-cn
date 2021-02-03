@@ -26,22 +26,29 @@ package com.leetcodecn._21_easy;
  * <p>
  * <p>
  * Definition for singly-linked list.
+ *
  * public class ListNode {
- * int val;
- * ListNode next;
- * ListNode() {}
- * ListNode(int val) { this.val = val; }
- * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ *      int val;
+ *      ListNode next;
+ *
+ *      ListNode() {}
+ *
+ *      ListNode(int val) {
+ *          this.val = val;
+ *      }
+ *
+ *      ListNode(int val, ListNode next) {
+ *          this.val = val; this.next = next;
+ *      }
  * }
+ *
  */
-public class _21_My1 {
-
-
+public class _21IterationWithoutGuard {
     /**
      * 执行用时： 0 ms
      * 内存消耗： 38 MB
      *
-     * 不带哨兵节点的写法. 带哨兵节点的写法见 {@link _21_My2}
+     * 不带哨兵节点的迭代写法. 带哨兵节点的写法见 {@link Best_21IterationWithGuard}
      *
      * @param l1
      * @param l2
@@ -101,5 +108,3 @@ public class _21_My1 {
         }
     }
 }
-
-

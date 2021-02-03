@@ -26,22 +26,29 @@ package com.leetcodecn._21_easy;
  * <p>
  * <p>
  * Definition for singly-linked list.
+ *
  * public class ListNode {
- * int val;
- * ListNode next;
- * ListNode() {}
- * ListNode(int val) { this.val = val; }
- * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ *      int val;
+ *      ListNode next;
+ *
+ *      ListNode() {}
+ *
+ *      ListNode(int val) {
+ *          this.val = val;
+ *      }
+ *
+ *      ListNode(int val, ListNode next) {
+ *          this.val = val; this.next = next;
+ *      }
  * }
+ *
  */
-public class _21_My2 {
-
-
+public class Best_21IterationWithGuard {
     /**
      * 执行用时： 0 ms
      * 内存消耗： 38.1 MB
      *
-     * 哨兵节点的写法.  在{@link _21_My1} 基础上, 修改为使用哨兵节点的写法.
+     * 带哨兵节点的迭代写法.  在{@link _21IterationWithoutGuard} 基础上, 修改为使用哨兵节点的写法.
      * 对于仅包含 next 指针的单向链表, 在首节点前边增加哨兵节点, 哨兵节点的 next指向首节点, 可以简化代码写法
      *
      * @param l1
@@ -52,14 +59,13 @@ public class _21_My2 {
         if (l1 == null) return l2;
         if (l2 == null) return l1;
 
-        // guard node 哨兵节点, 在起始节点前边额外放置的一个哨兵节点, 该哨兵节点的 next指针指向起始节点
+        // guard node 哨兵节点, 在起始节点前边额外放置的一个哨兵节点, 该哨兵节点的 next指针指向起始节点, 也叫 dummy 节点
         ListNode preFirstNode = new ListNode(-1);
         ListNode curIteratingNode = preFirstNode;
 
         while (l1 != null && l2 != null) {
             int val1 = l1.val;
             int val2 = l2.val;
-
             if (val1 <= val2) {
                 // 设置下一个节点来自 l1
                 curIteratingNode.next = l1;
@@ -94,5 +100,3 @@ public class _21_My2 {
         }
     }
 }
-
-

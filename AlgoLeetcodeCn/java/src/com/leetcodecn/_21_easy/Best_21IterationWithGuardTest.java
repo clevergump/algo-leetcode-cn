@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.leetcodecn._21_easy._21_My2.*;
+import static com.leetcodecn._21_easy.Best_21IterationWithGuard.*;
 
-class _21_My2Test {
+class Best_21IterationWithGuardTest {
 
     ListNode l1;
     ListNode l2;
@@ -72,19 +72,19 @@ class _21_My2Test {
 
     @Test
     void mergeTwoLists() {
-        ListNode node1 = new _21_My2().mergeTwoLists(null, null);
+        ListNode node1 = new Best_21IterationWithGuard().mergeTwoLists(null, null);
         Assertions.assertEquals(null, node1);
 
-        ListNode _node1 = new _21_My2().mergeTwoLists(null, l2);
+        ListNode _node1 = new Best_21IterationWithGuard().mergeTwoLists(null, l2);
         Assertions.assertEquals(l2, _node1);
 
-        ListNode __node1 = new _21_My2().mergeTwoLists(null, l1);
+        ListNode __node1 = new Best_21IterationWithGuard().mergeTwoLists(null, l1);
         Assertions.assertEquals(l1, __node1);
 
 
 
 
-        ListNode node2 = new _21_My2().mergeTwoLists(l1, l2);
+        ListNode node2 = new Best_21IterationWithGuard().mergeTwoLists(l1, l2);
         List<Integer> nodesValues = getNodesValues(node2, 6);
         int[] expected = {1, 2, 2, 3, 4, 4};
         Assertions.assertEquals(expected.length, nodesValues.size());
