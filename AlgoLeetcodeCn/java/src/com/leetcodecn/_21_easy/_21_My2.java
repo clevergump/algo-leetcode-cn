@@ -34,14 +34,15 @@ package com.leetcodecn._21_easy;
  * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-public class _21_My1 {
+public class _21_My2 {
 
 
     /**
      * 执行用时： 0 ms
-     * 内存消耗： 38 MB
+     * 内存消耗： 38.1 MB
      *
-     * 不带哨兵节点的写法. 带哨兵节点的写法见 {@link _21_My2}
+     * 哨兵节点的写法.  在{@link _21_My1} 基础上, 修改为使用哨兵节点的写法.
+     * 对于仅包含 next 指针的单向链表, 在首节点前边增加哨兵节点, 哨兵节点的 next指向首节点, 可以简化代码写法
      *
      * @param l1
      * @param l2
@@ -51,17 +52,9 @@ public class _21_My1 {
         if (l1 == null) return l2;
         if (l2 == null) return l1;
 
-        ListNode firstNode = null;
-        ListNode curIteratingNode = null;
-
-        if (l1.val <= l2.val) {
-            firstNode = l1;
-            l1 = l1.next;
-        } else {
-            firstNode = l2;
-            l2 = l2.next;
-        }
-        curIteratingNode = firstNode;
+        // guard node 哨兵节点, 在起始节点前边额外放置的一个哨兵节点, 该哨兵节点的 next指针指向起始节点
+        ListNode preFirstNode = new ListNode(-1);
+        ListNode curIteratingNode = preFirstNode;
 
         while (l1 != null && l2 != null) {
             int val1 = l1.val;
@@ -81,7 +74,7 @@ public class _21_My1 {
         }
 
         curIteratingNode.next = l1 != null ? l1 : l2;
-        return firstNode;
+        return preFirstNode.next;
     }
 
     static class ListNode {
