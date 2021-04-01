@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class _38_My2_RefactorTest {
+class _38_My1Optimize_RefactorTest {
 
     @Test
     void countAndSay() {

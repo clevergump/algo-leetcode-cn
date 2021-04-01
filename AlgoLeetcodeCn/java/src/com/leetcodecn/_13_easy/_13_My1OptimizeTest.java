@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class _13_My2Test {
+class _13_My1OptimizeTest {
 
     @Test
     void romanToInt() {

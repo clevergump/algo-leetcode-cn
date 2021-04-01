@@ -3,7 +3,7 @@ package com.leetcodecn._9_easy;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class _9_My2OfficialTest {
+class _9_My1OptimizeOfficialTest {
 
     @Test
     void isPalindrome() {

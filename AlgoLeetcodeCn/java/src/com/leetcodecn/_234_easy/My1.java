@@ -3,19 +3,37 @@ package com.leetcodecn._234_easy;
 import com.leetcodecn._234_easy.helper.ListNode;
 
 /**
- * 链表反转法
+ * 链表反转法, 比该算法思路更清晰的算法见 {@link My1Optimize}
  *
  * 9 ms, 在所有 Java 提交中击败了 21.91% 的用户
  * 56.6 MB, 在所有 Java 提交中击败了 5.04% 的用户
  *
+ * 该算法耗时的地方主要是:
+ * 1. 专门遍历一遍仅用于查找尾节点
+ * 2. 专门遍历一遍仅用于计算链表的节点总数以便据此计算尾节点的 index
+ * 总结: 虽然时间复杂度是O(n), 但遍历的次数过多, 导致耗时较多
+ *
+ * 改进上述耗时的做法:
+ * 1. 查找中间节点的算法, 可以由 "遍历全部n个元素" 改善为 "快慢指针各自运行从而只需遍历n/2个元素", 从而节省一半的时间
+ * 1. 查找到中间节点后, 解题思想仍是双指针双向遍历法, 但遍历的方向由"从两端向中间遍历"改为"从中间向两边遍历", 这样先前的如下4句算法:
+ *             head = head.next;
+ *             tail = tail.next;
+ *             headIndex++;
+ *             tailIndex--;
+ *  可以剔除掉对 index的自增自减操作了, while循环的条件改为直接判断 head, tail是否为null, 使得每次遍历过程都能节省index自增自减的耗时.
+ *
+ *  另外, 该算法的API设计不够优雅, 导致无法复用, 例如: {@link #reverseLinkedList} 的参数列表应该设计为仅有一个参数(即: 单链表的头节点)
+ *
+ *
+ *
  *
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ *     public int val;
+ *     public ListNode next;
+ *     public ListNode() {}
+ *     public ListNode(int val) { this.val = val; }
+ *     public ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
 public class My1 {

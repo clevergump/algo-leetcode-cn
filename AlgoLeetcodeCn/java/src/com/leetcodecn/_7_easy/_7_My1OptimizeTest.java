@@ -3,7 +3,7 @@ package com.leetcodecn._7_easy;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class _7_My2Test {
+class _7_My1OptimizeTest {
 
     @Test
     void reverseInt() {

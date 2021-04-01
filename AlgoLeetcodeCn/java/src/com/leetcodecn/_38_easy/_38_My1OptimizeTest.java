@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
-class _38_My2Test {
+class _38_My1OptimizeTest {
 
     @Test
     void countAndSay() {
