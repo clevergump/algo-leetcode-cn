@@ -1,0 +1,130 @@
+package com.leetcodecn._234_easy;
+
+import com.leetcodecn._234_easy.helper.ListNode;
+
+/**
+ * 链表反转法
+ *
+ * 9 ms, 在所有 Java 提交中击败了 21.91% 的用户
+ * 56.6 MB, 在所有 Java 提交中击败了 5.04% 的用户
+ *
+ *
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+public class My1 {
+
+    /** 链表的尾节点 */
+    private static ListNode tailNode = null;
+    /** 链表节点数量 */
+    private static int countOfNodes;
+
+    public boolean isPalindrome(ListNode head) {
+        if (head == null) return false;
+        countOfNodes = getNodesCount(head);
+        int midOrFormerMidIndex = getMidOrFormerMidIndex(countOfNodes);
+        reverseLinkedList(head, midOrFormerMidIndex);
+        return traversalFromBothEnds(head, tailNode);
+    }
+
+    /**
+     * 双指针双端遍历法
+     * @param head 头指针
+     * @param tail 尾指针
+     * @return
+     */
+    private boolean traversalFromBothEnds(ListNode head, ListNode tail) {
+        int headIndex = 0;
+        int tailIndex = countOfNodes - 1;
+        while (headIndex < tailIndex) {
+            int headValue = head.val;
+            int tailValue = tail.val;
+            if (headValue != tailValue) {
+                return false;
+            }
+            head = head.next;
+            tail = tail.next;
+            headIndex++;
+            tailIndex--;
+        }
+        return true;
+    }
+
+    /**
+     * 获取链表中间节点的下标.
+     * @param nodesCount
+     * @return 如果链表节点数量为奇数, 则返回中间节点的index. 当节点数量为偶数时, 是中间两个节点中靠前面的那个节点的index
+     */
+    static int getMidOrFormerMidIndex(int nodesCount) {
+        // 节点个数是否是奇数
+        boolean isOdd = nodesCount % 2 == 1;
+        int midIndex = nodesCount / 2;
+        // 节点数量为奇数时, 是中间节点的index. 当节点数量为偶数时, 是中间两个节点中靠前面的那个节点的index
+        return isOdd ? midIndex : (midIndex - 1);
+    }
+
+    /**
+     * 对单链表从中间节点开始进行反转
+     * @param head 头节点
+     * @param formerMidIndex 中间节点(对于偶数节点的链表, 指的是中间靠前的那个节点)
+     * @return 经过反转后的链表
+     */
+    static ListNode reverseLinkedList(ListNode head, int formerMidIndex) {
+        if (head == null) return head;
+
+        int index = -1;
+        ListNode curNode = head;
+        ListNode nextNode = head;
+        ListNode nextnextNode = null;
+
+        ListNode tempCurNode = null;
+        ListNode tempNextNode = null;
+        while (curNode != null) {
+            index ++;
+            if (index < formerMidIndex) {
+                curNode = curNode.next;
+            } else {
+                // 仅第一次才会执行该逻辑
+                if (nextNode == head) {
+                    nextNode = curNode.next;
+                }
+                // 已到达链表结尾了
+                if (nextNode == null) {
+                    return head;
+                }
+                // 用临时变量记录本轮迭代要用到的节点
+                tempCurNode = curNode;
+                tempNextNode = nextNode;
+                // 先移动好下一轮迭代要用的节点
+                nextnextNode = nextNode.next;
+                curNode = nextNode;
+                nextNode = nextnextNode;
+                // 利用先前记录的临时变量进行反转
+                tempNextNode.next = tempCurNode;
+            }
+        }
+        return head;
+    }
+
+    /**
+     * 获取一个链表的节点数量
+     * @param head
+     * @return
+     */
+    static int getNodesCount(ListNode head) {
+        int count = 0;
+        ListNode curNode = head;
+        while (curNode != null) {
+            count ++;
+            tailNode = curNode;
+            curNode = curNode.next;
+        }
+        return count;
+    }
+}
