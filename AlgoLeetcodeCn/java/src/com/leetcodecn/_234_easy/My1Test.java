@@ -1,7 +1,8 @@
 package com.leetcodecn._234_easy;
 
-import com.leetcodecn._234_easy.helper.ListNode;
-import com.leetcodecn._234_easy.helper.SinglyLinkedListFactory;
+
+import com.leetcodecn.common.helper.ListNode;
+import com.leetcodecn.common.helper.SinglyLinkedListFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

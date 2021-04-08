@@ -1,6 +1,7 @@
 package com.leetcodecn._141_easy;
 
-import com.leetcodecn._141_easy.helper.ListNode;
+
+import com.leetcodecn.common.helper.ListNode;
 
 public class My2 {
     /**

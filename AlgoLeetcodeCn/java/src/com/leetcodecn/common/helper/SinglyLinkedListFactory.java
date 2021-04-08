@@ -1,4 +1,4 @@
-package com.leetcodecn._141_easy.helper;
+package com.leetcodecn.common.helper;
 
 import java.util.ArrayList;
 import java.util.Iterator;

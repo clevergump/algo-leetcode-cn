@@ -1,6 +1,7 @@
 package com.leetcodecn._234_easy;
 
-import com.leetcodecn._234_easy.helper.ListNode;
+
+import com.leetcodecn.common.helper.ListNode;
 
 /**
  * 链表反转法, 对 {@link My1}的思路更清晰

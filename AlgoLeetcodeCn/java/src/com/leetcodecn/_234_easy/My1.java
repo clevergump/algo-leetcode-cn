@@ -1,6 +1,7 @@
 package com.leetcodecn._234_easy;
 
-import com.leetcodecn._234_easy.helper.ListNode;
+
+import com.leetcodecn.common.helper.ListNode;
 
 /**
  * 链表反转法, 比该算法思路更清晰的算法见 {@link My1Optimize}
