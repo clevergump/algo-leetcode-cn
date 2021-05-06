@@ -1,4 +1,4 @@
-package com.leetcodecn._94_medium;
+package com.leetcodecn._94_medium_nok;
 
 import com.leetcodecn.common.helper.TreeNode;
 
