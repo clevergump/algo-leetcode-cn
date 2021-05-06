@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 迭代解法。 运行fail，test不通过，报错。
- * 
+ *
  * 需反复研究官方的迭代解法 {@link OfficialInorderTraversal2}
  */
 public class InorderTraversal2_Fail {
