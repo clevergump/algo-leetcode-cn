@@ -1,6 +1,6 @@
-package com.leetcodecn._94_medium_nok.test;
+package com.leetcodecn._94_easy_nok.test;
 
-import com.leetcodecn._94_medium_nok.my.success.iteration.MyInorderIte1;
+import com.leetcodecn._94_easy_nok.my.success.iteration.MyInorderIte1;
 import com.leetcodecn.common.helper.BinaryTreeFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

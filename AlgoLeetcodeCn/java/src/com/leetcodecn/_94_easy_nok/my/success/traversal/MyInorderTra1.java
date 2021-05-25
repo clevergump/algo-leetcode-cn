@@ -1,4 +1,4 @@
-package com.leetcodecn._94_medium_nok.my.success.traversal;
+package com.leetcodecn._94_easy_nok.my.success.traversal;
 
 import com.leetcodecn.common.helper.TreeNode;
 

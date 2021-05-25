@@ -1,4 +1,4 @@
-package com.leetcodecn._94_medium_nok.my.success.iteration;
+package com.leetcodecn._94_easy_nok.my.success.iteration;
 
 import com.leetcodecn.common.helper.TreeNode;
 

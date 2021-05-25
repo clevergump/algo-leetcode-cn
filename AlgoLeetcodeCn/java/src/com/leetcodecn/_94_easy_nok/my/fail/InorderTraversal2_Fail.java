@@ -1,6 +1,6 @@
-package com.leetcodecn._94_medium_nok.my.fail;
+package com.leetcodecn._94_easy_nok.my.fail;
 
-import com.leetcodecn._94_medium_nok.official.OfficialInorderTraversal2;
+import com.leetcodecn._94_easy_nok.official.OfficialInorderTraversal2;
 import com.leetcodecn.common.helper.TreeNode;
 
 import java.util.LinkedList;
