@@ -1,11 +1,11 @@
 package com.leetcodecn._94_medium_nok.test;
 
-import com.leetcodecn._94_medium_nok.InorderTraversal1;
+import com.leetcodecn._94_medium_nok.my.success.traversal.MyInorderTra1;
 import com.leetcodecn.common.helper.BinaryTreeFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class InorderTraversal1Test {
+class MyInorderTra1Test {
 
     @Test
     void inorderTraversal() {
@@ -26,6 +26,6 @@ class InorderTraversal1Test {
     }
 
     private Object[] getTraversalValuesArr(Integer... nodeValuesByLayer) {
-        return InorderTraversal1.inorderTraversal(BinaryTreeFactory.createBinaryTree(nodeValuesByLayer)).toArray();
+        return MyInorderTra1.inorderTraversal(BinaryTreeFactory.createBinaryTree(nodeValuesByLayer)).toArray();
     }
 }

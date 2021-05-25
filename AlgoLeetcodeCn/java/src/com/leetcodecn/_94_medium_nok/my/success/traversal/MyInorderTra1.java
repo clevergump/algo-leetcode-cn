@@ -1,4 +1,4 @@
-package com.leetcodecn._94_medium_nok;
+package com.leetcodecn._94_medium_nok.my.success.traversal;
 
 import com.leetcodecn.common.helper.TreeNode;
 
@@ -12,7 +12,7 @@ import java.util.List;
  * 内存消耗：36.7 MB, 在所有 Java 提交中击败了44.28%的用户
  *
  */
-public class InorderTraversal1 {
+public class MyInorderTra1 {
     public static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> ret = new LinkedList<>();
         inorderTraversalAndSetValue(ret, root);

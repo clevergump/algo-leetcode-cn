@@ -1,6 +1,6 @@
 package com.leetcodecn._94_medium_nok.test;
 
-import com.leetcodecn._94_medium_nok.InorderTraversal2_Fail;
+import com.leetcodecn._94_medium_nok.my.fail.InorderTraversal2_Fail;
 import com.leetcodecn.common.helper.BinaryTreeFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
