@@ -33,25 +33,14 @@ import java.util.Map;
  */
 public class _1_Official {
 
-    public static int[] findIndexesOfTwo(int[] nums, int target) {
-        if (nums == null) {
-            throw new IllegalArgumentException("nums cannot be null.");
-        }
-        int numsCnt = nums.length;
-        if (numsCnt < 2) {
-            throw new IllegalArgumentException("nums must contains at least two elements.");
-        }
-        Map<Integer, Integer> valueIndexCache = new HashMap<Integer, Integer>(numsCnt - 1);
-        for (int curIndex = 0; curIndex < numsCnt; curIndex++) {
-            int curValue = nums[curIndex];
-            int valueToFind = target - curValue;
-            if (valueIndexCache.containsKey(valueToFind)) {
-                // 必定不是 null, 所以可以直接 unboxing
-                int indexToFind = valueIndexCache.get(valueToFind);
-                return new int[]{curIndex, indexToFind};
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> hashtable = new HashMap<Integer, Integer>();
+        for (int i = 0; i < nums.length; ++i) {
+            if (hashtable.containsKey(target - nums[i])) {
+                return new int[]{hashtable.get(target - nums[i]), i};
             }
-            valueIndexCache.put(curValue, curIndex);
+            hashtable.put(nums[i], i);
         }
-        throw new IllegalArgumentException("Cannot find the proper two elements in the nums array for the target.");
+        return new int[0];
     }
 }
